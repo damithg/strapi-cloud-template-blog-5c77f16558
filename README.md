@@ -1,61 +1,76 @@
-# 🚀 Getting started with Strapi
+# 📁 Strapi Schema & Content Setup
 
-Strapi comes with a full featured [Command Line Interface](https://docs.strapi.io/dev-docs/cli) (CLI) which lets you scaffold and manage your project in seconds.
+This folder contains custom Strapi content types and components for the **BSL Tours** project.
 
-### `develop`
-
-Start your Strapi application with autoReload enabled. [Learn more](https://docs.strapi.io/dev-docs/cli#strapi-develop)
-
-```
-npm run develop
-# or
-yarn develop
-```
-
-### `start`
-
-Start your Strapi application with autoReload disabled. [Learn more](https://docs.strapi.io/dev-docs/cli#strapi-start)
-
-```
-npm run start
-# or
-yarn start
-```
-
-### `build`
-
-Build your admin panel. [Learn more](https://docs.strapi.io/dev-docs/cli#strapi-build)
-
-```
-npm run build
-# or
-yarn build
-```
-
-## ⚙️ Deployment
-
-Strapi gives you many possible deployment options for your project including [Strapi Cloud](https://cloud.strapi.io). Browse the [deployment section of the documentation](https://docs.strapi.io/dev-docs/deployment) to find the best solution for your use case.
-
-```
-yarn strapi deploy
-```
-
-## 📚 Learn more
-
-- [Resource center](https://strapi.io/resource-center) - Strapi resource center.
-- [Strapi documentation](https://docs.strapi.io) - Official Strapi documentation.
-- [Strapi tutorials](https://strapi.io/tutorials) - List of tutorials made by the core team and the community.
-- [Strapi blog](https://strapi.io/blog) - Official Strapi blog containing articles made by the Strapi team and the community.
-- [Changelog](https://strapi.io/changelog) - Find out about the Strapi product updates, new features and general improvements.
-
-Feel free to check out the [Strapi GitHub repository](https://github.com/strapi/strapi). Your feedback and contributions are welcome!
-
-## ✨ Community
-
-- [Discord](https://discord.strapi.io) - Come chat with the Strapi community including the core team.
-- [Forum](https://forum.strapi.io/) - Place to discuss, ask questions and find answers, show your Strapi project and get feedback or just talk with other Community members.
-- [Awesome Strapi](https://github.com/strapi/awesome-strapi) - A curated list of awesome things related to Strapi.
+## 🏗️ Overview
+- The content is modeled to support destinations, tours, and related blocks like features, images, and essential info.
+- All content types are defined via code in `src/api/` and `src/components/`.
+- Data can be pulled dynamically from Strapi Cloud or local dev.
 
 ---
 
-<sub>🤫 Psst! [Strapi is hiring](https://strapi.io/careers).</sub>
+## 📁 Folder Structure
+
+```
+strapi/
+├── src/
+│   ├── api/
+│   │   └── destination/
+│   │       └── content-types/
+│   │           └── destination/schema.json
+│   └── components/
+│       ├── content/
+│       │   ├── overview-section.json
+│       │   ├── feature-section.json
+│       │   ├── faq.json
+│       │   ├── quote-block.json
+│       │   ├── video-block.json
+│       │   ├── related-tour.json
+│       │   ├── nearby-attraction.json
+│       │   └── essential-info.json
+│       └── shared/
+│           └── gallery-image.json
+```
+
+---
+
+## ⚙️ Environment Setup
+
+Use a `.env` file or `appsettings.json` in your .NET project to toggle between **local** and **cloud** Strapi:
+
+### `.NET` → `appsettings.json`
+```json
+"Strapi": {
+  "BaseUrl": "https://your-strapi-project.strapiapp.com/api",
+  "ApiToken": "YOUR_API_TOKEN"
+}
+```
+
+### Local Dev:
+```json
+"BaseUrl": "http://localhost:1337/api"
+```
+
+> ✅ Use DI to inject `HttpClient` with `Authorization: Bearer` header
+
+---
+
+## 🔄 Content Sync
+- All changes in this folder are **source of truth**.
+- You can delete `.cache`, `.tmp` and run:
+
+```bash
+npm run build && npm run develop
+```
+
+To force Strapi to reload all content types.
+
+---
+
+## 🧪 Optional Enhancements
+- Add `seed.js` for test data
+- Auto-import sample entries (like Sigiriya) on boot
+
+---
+
+Let me know if you'd like this auto-synced or versioned into a `strapi-dev` submodule! 🚀
