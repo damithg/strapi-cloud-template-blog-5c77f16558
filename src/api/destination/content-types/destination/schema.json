@@ -43,6 +43,10 @@
     "recommendedDuration": {
       "type": "string"
     },
+    "card": {
+      "type": "component",
+      "component": "shared.card"
+    },
     "heroImage": {
       "type": "component",
       "component": "shared.gallery-image"

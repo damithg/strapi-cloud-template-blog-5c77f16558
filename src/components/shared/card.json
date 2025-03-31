@@ -1,0 +1,25 @@
+{
+    "collectionName": "components_shared_card",
+    "info": {
+      "displayName": "Card",
+      "icon": "address-card",
+      "description": ""
+    },
+    "options": {},
+    "attributes": {
+      "image": {
+        "type": "component",
+        "component": "shared.gallery-image"
+      },
+      "title": {
+        "type": "string"
+      },
+      "subtitle": {
+        "type": "string"
+      },
+      "tag": {
+        "type": "string"
+      }
+    }
+  }
+  
