@@ -1,0 +1,16 @@
+{
+    "collectionName": "components_content_feature_items",
+    "info": {
+      "displayName": "Feature Item"
+    },
+    "attributes": {
+      "title": { "type": "string" },
+      "description": { "type": "text" },
+      "icon": { "type": "string" },
+      "image": {
+        "type": "component",
+        "component": "shared.gallery-image"
+      }
+    }
+  }
+  

@@ -1,0 +1,12 @@
+{
+  "collectionName": "components_content_highlight_items",
+  "info": {
+    "displayName": "Highlight Item"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "text"
+    }
+  }
+}

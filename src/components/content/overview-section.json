@@ -1,0 +1,15 @@
+{
+    "collectionName": "components_content_overview_sections",
+    "info": {
+      "displayName": "Overview Section"
+    },
+    "attributes": {
+      "title": { "type": "string" },
+      "fullDescription": { "type": "text" },
+      "image": {
+        "type": "component",
+        "component": "shared.gallery-image"
+      }
+    }
+  }
+  

@@ -1,0 +1,17 @@
+{
+    "collectionName": "components_shared_gallery_images",
+    "info": {
+      "displayName": "Gallery Image",
+      "icon": "image"
+    },
+    "attributes": {
+      "publicId": { "type": "string" },
+      "alt": { "type": "string" },
+      "caption": { "type": "string" },
+      "orientation": {
+        "type": "enumeration",
+        "enum": ["landscape", "portrait", "square"]
+      }
+    }
+  }
+  

@@ -1,0 +1,15 @@
+{
+    "collectionName": "components_content_feature_sections",
+    "info": {
+      "displayName": "Feature Section"
+    },
+    "attributes": {
+      "title": { "type": "string" },
+      "items": {
+        "type": "component",
+        "repeatable": true,
+        "component": "content.feature-item"
+      }
+    }
+  }
+  

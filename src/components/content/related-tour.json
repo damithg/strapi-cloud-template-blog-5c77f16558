@@ -1,0 +1,33 @@
+{
+    "collectionName": "components_content_related_tours",
+    "info": {
+        "displayName": "Related Tour"
+    },
+    "attributes": {
+        "name": {
+            "type": "string"
+        },
+        "slug": {
+            "type": "string"
+        },
+        "summary": {
+            "type": "text"
+        },
+        "duration": {
+            "type": "string"
+        },
+        "startingFrom": {
+            "type": "decimal"
+        },
+        "currency": {
+            "type": "string"
+        },
+        "link": {
+            "type": "string"
+        },
+        "image": {
+            "type": "component",
+            "component": "shared.gallery-image"
+        }
+    }
+}

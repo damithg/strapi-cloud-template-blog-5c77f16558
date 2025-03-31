@@ -1,0 +1,16 @@
+{
+    "collectionName": "components_content_essential_info",
+    "info": {
+      "displayName": "Essential Info"
+    },
+    "attributes": {
+      "bestTimeToVisit": { "type": "string" },
+      "nearestAirport": { "type": "string" },
+      "openingHours": { "type": "json" },
+      "transportOptions": { "type": "json" },
+      "entranceFees": { "type": "json" },
+      "accessibility": { "type": "json" },      
+      "travelTips": { "type": "json" },
+      "highlights": { "type": "json" }
+    }
+  }

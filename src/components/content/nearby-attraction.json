@@ -1,0 +1,27 @@
+{
+    "collectionName": "components_content_nearby_attractions",
+    "info": {
+        "displayName": "Nearby Attraction"
+    },
+    "attributes": {
+        "name": {
+            "type": "string"
+        },
+        "slug": {
+            "type": "string"
+        },
+        "description": {
+            "type": "text"
+        },
+        "distance": {
+            "type": "string"
+        },
+        "link": {
+            "type": "string"
+        },
+        "image": {
+            "type": "component",
+            "component": "shared.gallery-image"
+        }
+    }
+}
