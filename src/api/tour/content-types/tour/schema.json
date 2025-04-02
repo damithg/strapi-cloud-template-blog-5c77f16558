@@ -2,78 +2,125 @@
     "kind": "collectionType",
     "collectionName": "tours",
     "info": {
-      "singularName": "tour",
-      "pluralName": "tours",
-      "displayName": "Tour"
+        "singularName": "tour",
+        "pluralName": "tours",
+        "displayName": "Tour"
     },
     "options": {
-      "draftAndPublish": true
+        "draftAndPublish": true
     },
     "attributes": {
-      "name": { "type": "string", "required": true },
-      "slug": { "type": "uid", "targetField": "name" },
-      "summary": { "type": "text" },
-      "duration": { "type": "string" },
-      "startingFrom": { "type": "decimal" },
-      "currency": { "type": "string" },
-  
-      "heroImage": { "type": "component", "component": "shared.gallery-image" },
-      "cardImage": { "type": "component", "component": "shared.gallery-image" },
-      "galleryImages": {
-        "type": "component",
-        "repeatable": true,
-        "component": "shared.gallery-image"
-      },
-  
-      "itinerary": {
-        "type": "component",
-        "repeatable": true,
-        "component": "tour.itinerary-day"
-      },
-      "inclusions": { "type": "json" },
-      "exclusions": { "type": "json" },
-      "accommodationInfo": { "type": "text" },
-  
-      "relatedDestinations": {
-        "type": "component",
-        "repeatable": true,
-        "component": "shared.related-destination"
-      },
-      "faqs": {
-        "type": "component",
-        "repeatable": true,
-        "component": "shared.faq"
-      },
-  
-      "pricingTiers": {
-        "type": "component",
-        "repeatable": true,
-        "component": "tour.pricing-tier"
-      },
-      "optionalAddOns": {
-        "type": "component",
-        "repeatable": true,
-        "component": "tour.add-on"
-      },
-      "operatedBy": { "type": "string" },
-      "guideProfileUrl": { "type": "string" },
-      "category": { "type": "string" },
-      "tags": { "type": "json" },
-      "departureDates": { "type": "json" },
-      "bookingWindow": { "type": "string" },
-  
-      "reviews": {
-        "type": "component",
-        "repeatable": true,
-        "component": "shared.review"
-      },
-  
-      "mapEmbedUrl": { "type": "string" },
-      "routeOverview": { "type": "text" },
-      "minGroupSize": { "type": "integer" },
-      "maxGroupSize": { "type": "integer" },
-      "bookingUrl": { "type": "string" },
-      "languagesSupported": { "type": "json" }
+        "name": {
+            "type": "string",
+            "required": true
+        },
+        "slug": {
+            "type": "uid",
+            "targetField": "name"
+        },
+        "summary": {
+            "type": "text"
+        },
+        "duration": {
+            "type": "string"
+        },
+        "startingFrom": {
+            "type": "decimal"
+        },
+        "currency": {
+            "type": "string"
+        },
+        "featured": {
+            "type": "boolean",
+            "default": false
+        },
+        "heroImage": {
+            "type": "component",
+            "component": "shared.gallery-image"
+        },
+        "cardImage": {
+            "type": "component",
+            "component": "shared.gallery-image"
+        },
+        "galleryImages": {
+            "type": "component",
+            "repeatable": true,
+            "component": "shared.gallery-image"
+        },
+        "itinerary": {
+            "type": "component",
+            "repeatable": true,
+            "component": "tour.itinerary-day"
+        },
+        "inclusions": {
+            "type": "json"
+        },
+        "exclusions": {
+            "type": "json"
+        },
+        "accommodationInfo": {
+            "type": "text"
+        },
+        "relatedDestinations": {
+            "type": "component",
+            "repeatable": true,
+            "component": "shared.related-destination"
+        },
+        "faqs": {
+            "type": "component",
+            "repeatable": true,
+            "component": "shared.faq"
+        },
+        "pricingTiers": {
+            "type": "component",
+            "repeatable": true,
+            "component": "tour.pricing-tier"
+        },
+        "optionalAddOns": {
+            "type": "component",
+            "repeatable": true,
+            "component": "tour.add-on"
+        },
+        "operatedBy": {
+            "type": "string"
+        },
+        "guideProfileUrl": {
+            "type": "string"
+        },
+        "category": {
+            "type": "string"
+        },
+        "tags": {
+            "type": "json"
+        },
+        "departureDates": {
+            "type": "json"
+        },
+        "bookingWindow": {
+            "type": "string"
+        },
+        "reviews": {
+            "type": "component",
+            "repeatable": true,
+            "component": "shared.review"
+        },
+        "mapEmbedUrl": {
+            "type": "string"
+        },
+        "routeOverview": {
+            "type": "text"
+        },
+        "minGroupSize": {
+            "type": "integer"
+        },
+        "maxGroupSize": {
+            "type": "integer"
+        },
+        "bookingUrl": {
+            "type": "string"
+        },
+        "languagesSupported": {
+            "type": "json"
+        }
     }
-  }
-  
+}
