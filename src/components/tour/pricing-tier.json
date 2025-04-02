@@ -1,0 +1,17 @@
+{
+    "collectionName": "components_tour_pricing_tier",
+    "info": {
+        "displayName": "Pricing Tier"
+    },
+    "attributes": {
+        "label": {
+            "type": "string"
+        },
+        "price": {
+            "type": "decimal"
+        },
+        "description": {
+            "type": "text"
+        }
+    }
+}

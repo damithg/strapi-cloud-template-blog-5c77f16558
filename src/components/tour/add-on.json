@@ -1,0 +1,17 @@
+{
+    "collectionName": "components_tour_add_on",
+    "info": {
+        "displayName": "Add-On"
+    },
+    "attributes": {
+        "title": {
+            "type": "string"
+        },
+        "price": {
+            "type": "decimal"
+        },
+        "description": {
+            "type": "text"
+        }
+    }
+}

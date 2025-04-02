@@ -1,0 +1,18 @@
+{
+    "collectionName": "components_shared_related_destination",
+    "info": {
+        "displayName": "Related Destination"
+    },
+    "attributes": {
+        "name": {
+            "type": "string"
+        },
+        "slug": {
+            "type": "string"
+        },
+        "image": {
+            "type": "component",
+            "component": "shared.gallery-image"
+        }
+    }
+}

@@ -1,0 +1,20 @@
+{
+    "collectionName": "components_shared_review",
+    "info": {
+        "displayName": "Review"
+    },
+    "attributes": {
+        "reviewer": {
+            "type": "string"
+        },
+        "country": {
+            "type": "string"
+        },
+        "comment": {
+            "type": "text"
+        },
+        "rating": {
+            "type": "integer"
+        }
+    }
+}
