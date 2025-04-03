@@ -15,7 +15,7 @@
         "description": {
             "type": "text"
         },
-        "images": {
+        "image": {
             "type": "component",
             "component": "shared.gallery-image"
         }
