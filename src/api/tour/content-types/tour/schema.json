@@ -38,9 +38,9 @@
             "type": "component",
             "component": "shared.gallery-image"
         },
-        "cardImage": {
+        "card": {
             "type": "component",
-            "component": "shared.gallery-image"
+            "component": "shared.card"
         },
         "galleryImages": {
             "type": "component",
