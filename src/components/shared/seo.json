@@ -1,26 +1,41 @@
 {
   "collectionName": "components_shared_seos",
   "info": {
-    "name": "Seo",
-    "icon": "allergies",
-    "displayName": "Seo",
-    "description": ""
+    "displayName": "seo",
+    "icon": "globe",
+    "description": "Full SEO metadata"
   },
   "options": {},
   "attributes": {
-    "metaTitle": {
-      "type": "string",
-      "required": true
-    },
-    "metaDescription": {
-      "type": "text",
-      "required": true
-    },
-    "shareImage": {
+    "metaTitle": { "type": "string", "required": true },
+    "metaDescription": { "type": "text", "required": true },
+    "metaImage": {
       "type": "media",
       "multiple": false,
-      "required": false,
       "allowedTypes": ["images"]
+    },
+    "canonicalUrl": { "type": "string" },
+    "metaRobots": {
+      "type": "enumeration",
+      "enum": ["index, follow", "noindex, nofollow", "index, nofollow", "noindex, follow"],
+      "default": "index, follow"
+    },
+    "keywords": { "type": "string" },
+    "ogTitle": { "type": "string" },
+    "ogDescription": { "type": "text" },
+    "twitterTitle": { "type": "string" },
+    "twitterDescription": { "type": "text" },
+    "structuredData": { "type": "json" },
+    "publishedTime": { "type": "datetime" },
+    "modifiedTime": { "type": "datetime" },
+    "priority": {
+      "type": "decimal",
+      "default": 0.5
+    },
+    "changefreq": {
+      "type": "enumeration",
+      "enum": ["always", "hourly", "daily", "weekly", "monthly", "yearly", "never"],
+      "default": "weekly"
     }
   }
 }
