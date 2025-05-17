@@ -1,0 +1,20 @@
+{
+  "collectionName": "test_links",
+  "info": {
+    "singularName": "test-link",
+    "pluralName": "test-links",
+    "displayName": "Test Link"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "attributes": {
+    "label": {
+      "type": "string"
+    },
+    "link": {
+      "type": "component",
+      "component": "shared.linkItem"
+    }
+  }
+}
