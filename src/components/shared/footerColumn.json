@@ -10,7 +10,7 @@
       "links": {
         "type": "component",
         "repeatable": true,
-        "component": "shared.linkItem"
+        "component": "shared.linkentry"
       }
     }
   }
