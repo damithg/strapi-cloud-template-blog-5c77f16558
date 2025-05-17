@@ -1,0 +1,13 @@
+{
+  "collectionName": "components_experience_list_inclusions",
+  "info": {
+    "displayName": "Inclusion",
+    "icon": "check"
+  },
+  "attributes": {
+    "text": {
+      "type": "string",
+      "required": true
+    }
+  }
+}

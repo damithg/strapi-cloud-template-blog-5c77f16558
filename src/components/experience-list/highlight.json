@@ -1,0 +1,13 @@
+{
+  "collectionName": "components_experience_list_highlights",
+  "info": {
+    "displayName": "Highlight",
+    "icon": "star"
+  },
+  "attributes": {
+    "text": {
+      "type": "string",
+      "required": true
+    }
+  }
+}

@@ -1,0 +1,79 @@
+{
+  "collectionName": "experiences",
+  "info": {
+    "singularName": "experience",
+    "pluralName": "experiences",
+    "displayName": "Experience",
+    "description": "Immersive local experiences offered through BSL Tours"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "slug": {
+      "type": "uid",
+      "targetField": "title",
+      "required": true
+    },
+    "shortSummary": {
+      "type": "string"
+    },
+    "duration": {
+      "type": "string"
+    },
+    "price": {
+      "type": "decimal"
+    },
+    "difficulty": {
+      "type": "enumeration",
+      "enum": ["Easy", "Moderate", "Challenging"]
+    },
+    "description": {
+      "type": "richtext",
+      "required": true
+    },
+    "highlights": {
+      "type": "component",
+      "repeatable": true,
+      "component": "experience-list.highlight"
+    },
+    "inclusions": {
+      "type": "component",
+      "repeatable": true,
+      "component": "experience-list.inclusion"
+    },
+    "whatToBring": {
+      "type": "component",
+      "repeatable": true,
+      "component": "experience-list.bring-item"
+    },
+    "location": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::destination.destination"
+    },
+    "featured": {
+      "type": "boolean",
+      "default": false
+    },
+    "seo": {
+      "type": "component",
+      "component": "shared.seo",
+      "required": false
+    },
+    "card": {
+      "type": "component",
+      "component": "shared.card",
+      "required": false
+    },
+    "galleryImage": {
+      "type": "component",
+      "component": "shared.gallery-image",
+      "required": false
+    }
+  }
+}

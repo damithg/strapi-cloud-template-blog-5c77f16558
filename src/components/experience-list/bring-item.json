@@ -1,0 +1,13 @@
+{
+  "collectionName": "components_experience_list_bring_items",
+  "info": {
+    "displayName": "What To Bring",
+    "icon": "suitcase"
+  },
+  "attributes": {
+    "text": {
+      "type": "string",
+      "required": true
+    }
+  }
+}
