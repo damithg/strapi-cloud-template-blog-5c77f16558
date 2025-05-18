@@ -72,6 +72,7 @@
     },
     "galleryImage": {
       "type": "component",
+      "repeatable": true,
       "component": "shared.gallery-image",
       "required": false
     }
