@@ -75,6 +75,11 @@
       "repeatable": true,
       "component": "shared.gallery-image",
       "required": false
+    },
+    "relatedExperiences": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::experience.experience"
     }
   }
 }
