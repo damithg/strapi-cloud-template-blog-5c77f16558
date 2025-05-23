@@ -26,5 +26,13 @@ module.exports = {
         auth: false,
       },
     },
+    {
+      method: 'GET',
+      path: '/experiences/by-slug/:slug',
+      handler: 'experience.findBySlug',
+      config: {
+        auth: false,
+      },
+    },
   ],
 };

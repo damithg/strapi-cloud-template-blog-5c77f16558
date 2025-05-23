@@ -3,15 +3,13 @@
 const { createCoreController } = require('@strapi/strapi').factories;
 
 module.exports = createCoreController('api::experience.experience', ({ strapi }) => ({
-  async find(ctx) {
-    const { query } = ctx;
+  async findBySlug(ctx) {
+    const { slug } = ctx.params;
 
-    const entities = await strapi.entityService.findMany('api::experience.experience', {
-      ...query,
+    const entries = await strapi.entityService.findMany('api::experience.experience', {
+      filters: { slug },
       populate: {
-        card: {
-          populate: { image: true },
-        },
+        card: { populate: { image: true } },
         galleryImage: true,
         seo: {
           populate: {
@@ -31,13 +29,17 @@ module.exports = createCoreController('api::experience.experience', ({ strapi })
                 },
               },
             },
-            highlights: true
+            highlights: true,
           },
         },
+        location: true,
+        highlights: true,
+        inclusions: true,
+        whatToBring: true
       },
     });
 
-    const sanitized = await this.sanitizeOutput(entities, ctx);
+    const sanitized = await this.sanitizeOutput(entries[0], ctx);
     return this.transformResponse(sanitized);
-  }
+  },
 }));
