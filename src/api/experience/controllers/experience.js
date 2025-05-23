@@ -43,12 +43,13 @@ module.exports = createCoreController('api::experience.experience', ({ strapi })
       },
     });
 
-    // Return 404 if not found
     if (!entries || entries.length === 0) {
       return ctx.notFound("Experience not found");
     }
 
-    const sanitized = await this.sanitizeOutput(entries[0], ctx);
-    return this.transformResponse(sanitized);
+    ctx.body = {
+      data: entries[0],
+      meta: {},
+    };
   }
 }));
